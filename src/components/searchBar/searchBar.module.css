@@ -1,0 +1,46 @@
+ .Input {
+    padding: 10px;
+    margin: 40px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  /* Estilo para el botón de envío */
+  input[type="submit"] {
+    padding: 10px 20px;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  /* Cambia el estilo del cursor cuando pasa sobre el botón */
+  input[type="submit"]:hover {
+    background-color: #6bdfaa;
+  }
+
+
+  /***Responsive movil***/
+
+@media screen and (max-width: 1220px){
+ .Input{
+  width: 200px;
+  height: 40px;
+ }
+}
+
+@media screen and (max-width: 440px){
+ .form{
+  display: flex;
+  justify-content: center;
+ }
+
+ .Input{
+  width: 120px;
+  height: 30px;
+  margin: 20px;
+ }
+}

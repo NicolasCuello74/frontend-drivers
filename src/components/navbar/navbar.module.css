@@ -1,0 +1,80 @@
+.searchBox{
+        display: flex;
+        justify-content:space-evenly;
+        align-items: center;
+        margin-top: 0;
+        margin-left: 200px;
+        margin-right: 200px;
+        width: 100%;
+}
+
+.button{
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.buttonExit{
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 100%;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: red;
+}
+.select{
+    margin-top: 20px;
+    width: 200px;
+    height: 40px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color:#ccc;
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+
+/***Responsive movil***/
+
+@media screen and (max-width: 1220px){
+    .searchBox{
+        width: 50%;
+        flex-flow: row wrap;
+    }
+   .button{
+    width: 200px;
+    height: 40px;
+   }
+}
+
+@media screen and (max-width: 946px){
+    .searchBox{
+        width: 50%;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 440px){
+    .searchBox{
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .select{
+        height: 20px;
+        font-size: 12px;
+    }
+    .button{
+        height: 30px;
+        font-size: 12px;
+        text-align: center;
+    }
+    .buttonExit{
+        font-size: 12px;
+        text-align: center;
+    }
+}

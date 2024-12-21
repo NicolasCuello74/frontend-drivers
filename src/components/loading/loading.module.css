@@ -1,0 +1,11 @@
+.detailContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+  }
+  .loadingGif {
+    width: 400px;
+    height: 400px;
+  }
+  

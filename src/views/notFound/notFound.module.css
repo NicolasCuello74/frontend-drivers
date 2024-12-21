@@ -1,0 +1,15 @@
+.Contenedor{
+ display: flex;
+ flex-direction: column;
+}
+
+.imga{
+ height: 100vh;
+ width: 100vw;
+}
+.buttonNotFound{
+    padding: 10px;
+    margin: 20px;
+    border-radius: 100%;
+    justify-items: center;
+}

@@ -1,0 +1,23 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: rgb(196, 196, 196);
+  background: linear-gradient(
+    90deg,
+    rgba(196, 196, 196, 1) 0%,
+    rgba(255, 255, 255, 1) 61%
+  );
+
+  font-family: "Titillium Web", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+}
