@@ -9,11 +9,11 @@ export const LOADING = "LOADING";
 export const POST_DRIVER = "POST_DRIVER";
 export const SET_CURRENT_PAGE = "SET_CURRENT_PAGE";
 export const BORRAR = "BORRAR";
-const URL = "https://backend-api-drivers.vercel.app";
+const apiUrl = import.meta.env.VITE_API_URL;
 
 export const getDrivers = () => {
   return async function (dispatch) {
-    const response = await axios.get(`${URL}/drivers`);
+    const response = await axios.get(`${apiUrl}/drivers`);
     return dispatch({
       type: "GET_DRIVERS",
       payload: response.data,
@@ -29,7 +29,7 @@ export const borrarFiltros = () => {
 
 export function getByName(name) {
   return async function (dispatch) {
-    const response = await axios.get(`${URL}/name?name=${name}`);
+    const response = await axios.get(`${apiUrl}/name?name=${name}`);
     return dispatch({
       type: "GET_BY_NAME",
       payload: response.data,
@@ -39,7 +39,7 @@ export function getByName(name) {
 
 export function postDriver(payload) {
   return async function (dispatch) {
-    const { data } = await axios.post(`${URL}/drivers`, payload)
+    const { data } = await axios.post(`${apiUrl}/drivers`, payload)
     return dispatch({
       type: "POST_DRIVER",
       payload: data
@@ -51,7 +51,7 @@ export function getDriverId(id) {
  return async function (dispatch) {
     try {
       dispatch({ type: LOADING });
-      const response = await axios.get(`${URL}/drivers/${id}`);
+      const response = await axios.get(`${apiUrl}/drivers/${id}`);
       dispatch({
         type: "GET_DETAIL",
         payload: response.data,
@@ -65,7 +65,7 @@ export function getDriverId(id) {
 
 export function getTeams() {
   return async function (dispatch) {
-    const response = await axios.get(`${URL}/teams`);
+    const response = await axios.get(`${apiUrl}/teams`);
     return dispatch({
       type: "GET_TEAMS",
       payload: response.data
